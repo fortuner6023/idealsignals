@@ -164,9 +164,28 @@
                         <!-- /.col-md-4 -->
                         <div class="col-md-8">
                             <div class="contact-froms">
-                                <h4>Contact us through our on-site support located in the bottom left and a support representative will answer you shortly. </h4>
-                                <h4>If you are a user looking for general help or information, contact <a href="mailto:support@idealsignals.com" target="_blank">support@idealsignals.com</a></h4>
-                                <h4>If you are a server admin looking to join our catalog, contact <a href="mailto:sales@idealsignals.com" target="_blank">sales@idealsignals.com</a></h4>
+                                <form action="php/mailer.php" class="contact-form" data-pixsaas="contact-froms">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input type="text" name="name" placeholder="Name" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="email" name="email" placeholder="Email" required>
+                                        </div>
+                                    </div>
+                                    <input type="text" name="subject" placeholder="Subject">
+                                    <textarea name="content" placeholder="Your Comment" required></textarea>
+                                    <button type="submit" class="pix-btn submit-btn color-two">
+                                        <span class="btn-text">Send Your Message</span>
+                                        <i class="fas fa-spinner fa-spin"></i>
+                                    </button>
+                                    <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+                                    <div class="row">
+                                        <div class="form-result alert">
+                                            <div class="content"></div>
+                                        </div>
+                                    </div>
+                                </form>
                                 <!-- /.contact-froms -->
                             </div>
                             <!-- /.faq-froms -->
